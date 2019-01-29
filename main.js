@@ -1,20 +1,20 @@
 //JSON style data
 var allQuestions = [
     { 
-        question: "Why is Prime Minister of the United Kingdom?", 
-        choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], 
+        question: "Who is Prime Minister of the United Kingdom?", 
+        choices: ["David Blane", "Gordon Bennet", "Winston Churchill", "Fat Tony"], 
         correctAnswer: 0 
     },
     {
         question: "Where is your favourite colour?",
-        choices: ["Green", "Brown", "Blue", "Red"],
+        choices: ["Green", "Triangle", "Helicopter", "Monday"],
         correctAnswer: 0
     },
     {
         question: "Who is your name?",
-        choices: ["Bob", "Paul", "Andrey", "Alex"],
+        choices: ["Bob", "Jabba", "Andrey", "Alex"],
         correctAnswer: 0
-    },
+    }
 ];
 
 
@@ -84,7 +84,11 @@ function nextQuestion(){
 
         } else{
 
-            alert(`end of quiz, you scored ${score} out of ${allQuestions.length}`);
+            Swal.fire({
+                title: `Lol <br /> You scored ${score} out of ${allQuestions.length}, try again.`,
+                animation: false,
+                customClass: 'animated lightSpeedIn'
+            });
             score -= score;
             questionNumber -= allQuestions.length - 1;
             clearOptions();
