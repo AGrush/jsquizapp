@@ -1,0 +1,36 @@
+
+{
+    "allQuestions":
+                    [ 
+                        { 
+                            "question": "Who is Prime Minister of the United Kingdom?", 
+                            "choices": [
+                                "David Blaine",
+                                "Gordon Bennet",
+                                "Winston Churchill",
+                                "Fat Tony"
+                            ], 
+                            "correctAnswer": 0
+                        },
+                        {
+                            "question": "Where is your favourite colour?",
+                            "choices": [
+                                "Green",
+                                "Triangle",
+                                "Helicopter",
+                                "Monday"
+                            ],
+                            "correctAnswer": 0
+                        },
+                        {
+                            "question": "Who is your name?",
+                            "choices": [
+                                "Bob",
+                                "Jabba",
+                                "Andrey",
+                                "Alex"
+                            ],
+                            "correctAnswer": 0
+                        }
+                    ]
+}

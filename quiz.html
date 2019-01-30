@@ -14,39 +14,49 @@
     <!-- ANIMATE.css for Sweet Alert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-    
+    <script type="text/javascript">
+         function goToNextPage() {
+                if (currentUser) {
+                    let quizHeader = document.getElementById("quizHeader");
+                    quizHeader.innerHTML = `Hello ${currentUser}`
+                };
+            }
+
+            setTimeout(goToNextPage, 0);  
+    </script>
 
 </head>
 
 <body>
     <div class="container-fluid">
-
         <div class="row">
-            <div id="hiThere" class="d-flex mx-auto mt-5 mb-5">
-                 Welcome to the quiz.
+            <div id="quizHeader" class="d-flex mx-auto mt-5 mb-5">
+                Quiz with no cookies.
             </div>
         </div>
-        
         <div class="row">
-            <div class="d-flex mx-auto mb-5">
-                <form id="myForm" action="quiz.html">
-                    <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Name:</span>
-                        </div>
-                    
-                        <input name="textField" id="name-input" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="col-12 col-sm-6 mx-auto">
+                <form>
+                    <div class="form-group">
+                        <p class="questionX">What is your favourite instrument?</p>
                     </div>
-                    <button 
-                        type="submit" 
-                        form="myForm" 
-                        onClick="return empty()" 
-                        class="btn btn-primary mt-4 d-flex mx-auto mt-2"> Lets go!
-                    </button>  
+
+                    <select class="userAnswer custom-select mb-3">
+                        <option disabled selected>Pick one</option>
+                        <!-- <option value="0">Guitar</option>
+                        <option value="1">Violin</option>
+                        <option value="2">Oboe</option> -->
+                    </select>
+
+                    
                 </form>
+
+                <button type="button" id="nextQuestion" class="btn btn-primary d-flex mx-auto mt-2">Next</button>
+
+                
+
             </div>
         </div>
-
     </div>
 
 
@@ -58,23 +68,6 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/default-passive-events"></script>
     <script src="main.js"></script>
-
-
-    <script type="text/javascript">
-        if (currentUser) {
-                document.getElementById("hiThere").innerHTML = `Hello ${currentUser} you have 5 seconds to change ur name`
-        };
-
-        function goToNextPage() {
-                if (currentUser) {
-                    
-                    window.location.href = "./quiz.html"
-                };
-            }
-        
-        setTimeout(goToNextPage, 5000);  
-    
-    </script>
 </body>
 
 </html>
